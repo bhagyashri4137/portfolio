@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Open email client with pre-filled data
     const mailtoLink = `mailto:bhagyashri4137@gmail.com?subject=Portfolio Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
