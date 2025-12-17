@@ -4,19 +4,21 @@ const projects = [
   {
     title: 'Getivity',
     description: 'A productivity platform built with modern React patterns and a beautiful UI powered by Chakra UI.',
-    tech: ['React', 'Next.js', 'Chakra UI'],
+    tech: ['React.js', 'Next.js', 'Chakra UI', 'Contentful'],
     color: 'from-cyan-500/20 to-blue-500/20',
+    link: 'https://getivity-dev.com/'
   },
   {
     title: 'Filsuvez',
     description: 'Healthcare-focused web application featuring smooth animations and responsive design using Framer Motion.',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
     color: 'from-purple-500/20 to-pink-500/20',
+    link: 'https://www.filsuvez.com/'
   },
   {
     title: 'BrightDrop',
     description: 'Logistics and delivery management solution with intuitive interfaces and optimized performance.',
-    tech: ['React', 'Next.js', 'Tailwind CSS'],
+    tech: ['React.js', 'Next.js', 'Tailwind CSS'],
     color: 'from-green-500/20 to-emerald-500/20',
   },
 ];
@@ -42,7 +44,7 @@ const Projects = () => {
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 
                                  group-hover:opacity-100 transition-opacity duration-500`} />
-                
+
                 {/* Content */}
                 <div className="relative p-6 h-full flex flex-col">
                   <div className="flex items-center justify-between mb-4">
@@ -82,7 +84,7 @@ const Projects = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground text-sm mb-6 flex-grow">
                     {project.description}
                   </p>
@@ -97,6 +99,17 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      className="text-primary hover:underline mt-4 inline-block"
+                    >
+                      Demo Link
+                    </a>
+                  )}
+
                 </div>
               </div>
             ))}

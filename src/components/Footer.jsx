@@ -11,7 +11,7 @@ const Footer = () => {
             © {currentYear} Bhagyashree Bhendarkar. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-primary fill-primary" /> using React & Tailwind
+            Built with using React & Tailwind
           </p>
         </div>
       </div>
